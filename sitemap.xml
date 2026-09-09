@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://wuhill.com.tw/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://wuhill.com.tw/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wuhill.com.tw/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://wuhill.com.tw/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wuhill.com.tw/"/>
+    <image:image>
+      <image:loc>https://wuhill.com.tw/assets/hero.webp</image:loc>
+      <image:title>霧丘茶宿 山間茶席</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wuhill.com.tw/assets/room1-1.webp</image:loc>
+      <image:title>曉霧｜山景露台雙人房</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wuhill.com.tw/assets/room2-1.webp</image:loc>
+      <image:title>茶岫｜茶園景觀雙人房</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wuhill.com.tw/assets/room3-1.webp</image:loc>
+      <image:title>雲棲｜山景四人房</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://wuhill.com.tw/en/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wuhill.com.tw/ja/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
