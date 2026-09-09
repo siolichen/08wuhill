@@ -88,6 +88,13 @@ details[open] [data-faq-mark]{transform:rotate(45deg)}
   #wh-preload .wh-pl-bar i{animation:none;width:100%}
 }
 
+
+/* FAQ：桌機收合狀態的題目列與左側照片對齊、總高度收在照片範圍內 */
+@media (min-width:821px){
+  [data-faq-grid] > div:last-child{padding-top:clamp(64px,11.5vw,158px)}
+  [data-faq-grid] summary{padding:17px 0 !important}
+  [data-faq-grid] details p{padding-bottom:22px !important}
+}
 /* ---- 平板 / tablet ---- */
 @media (max-width:1024px){
   [data-collage]{max-width:100% !important}
