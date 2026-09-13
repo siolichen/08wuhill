@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>線上訂房｜霧丘茶宿 WU HILL</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bk-header">
+  <div class="row">
+    <a class="bk-back" href="zh.html">← 返回首頁</a>
+    <div class="steps" id="stepsBar">
+      <div class="step active" data-step="1"><span class="dot">1</span><span class="lbl">選擇日期</span></div>
+      <div class="sep"></div>
+      <div class="step" data-step="2"><span class="dot">2</span><span class="lbl">填寫資料</span></div>
+      <div class="sep"></div>
+      <div class="step" data-step="3"><span class="dot">3</span><span class="lbl">完成</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="bk-wrap">
+
+  <!-- STEP 1 -->
+  <section id="bkStep1">
+    <div class="bk-grid">
+      <div>
+        <div class="bk-card">
+          <h2>選擇房型</h2>
+          <div class="room-tabs" id="roomTabs"></div>
+
+          <div class="cal-legend">
+            <span><i class="weekday"></i>平日</span>
+            <span><i class="weekend"></i>假日</span>
+            <span><i class="peak"></i>連假定價</span>
+            <span class="legend-booked"><s>15</s>已預訂（不可選）</span>
+          </div>
+
+          <div class="cal-nav">
+            <button id="calPrev" aria-label="上個月">‹</button>
+            <div class="month-label" id="calMonthLabel"></div>
+            <button id="calNext" aria-label="下個月">›</button>
+          </div>
+          <div class="cal-grid" id="calDow"></div>
+          <div class="cal-grid" id="calGrid" style="margin-top:6px;"></div>
+
+          <p class="bk-note">可預訂期間：明日起至3個月內；恕不接受當日訂房。<br>＊連假定價日期僅為示範範例，實際請以民宿公告為準。</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="summary-card">
+          <h3>訂房明細</h3>
+          <div id="summaryBody"><p class="summary-empty">請先在行事曆選擇入住與退房日期。</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="bk-actions" style="justify-content:flex-end;">
+      <button class="btn btn-primary" id="toStep2" disabled>下一步：填寫資料 →</button>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section id="bkStep2" hidden>
+    <div class="bk-grid">
+      <div>
+        <form id="guestForm" novalidate>
+          <div class="bk-card">
+            <h2>訂房人資訊</h2>
+            <div class="field-grid">
+              <div class="field" id="f-name">
+                <label for="in-name">姓名 *</label>
+                <input id="in-name" name="name" type="text" autocomplete="name" required>
+                <p class="err-msg">請輸入姓名</p>
+              </div>
+              <div class="field" id="f-phone">
+                <label for="in-phone">聯絡電話 *</label>
+                <input id="in-phone" name="phone" type="tel" autocomplete="tel" placeholder="09xx-xxx-xxx" required>
+                <p class="err-msg">請輸入正確的電話號碼</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field" id="f-email">
+                <label for="in-email">電子郵件 *</label>
+                <input id="in-email" name="email" type="email" autocomplete="email" required>
+                <p class="hint">訂房確認信將「模擬」寄送至此信箱（本站不會真的寄出）</p>
+                <p class="err-msg">請輸入正確的電子郵件</p>
+              </div>
+              <div class="field" id="f-guests">
+                <label for="in-guests">入住人數</label>
+                <select id="in-guests" name="guests"></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="in-note">備註（選填）</label>
+              <textarea id="in-note" name="note" rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="bk-card">
+            <h2>付款資訊（模擬刷卡）</h2>
+            <p class="bk-note" style="margin-top:-8px;margin-bottom:16px;">本欄位僅供操作流程示範，<b>請勿輸入真實卡號</b>，系統不會實際請款。</p>
+            <div class="field" id="f-cardname">
+              <label for="in-cardname">持卡人姓名 *</label>
+              <input id="in-cardname" name="cardname" type="text" required>
+              <p class="err-msg">請輸入持卡人姓名</p>
+            </div>
+            <div class="field" id="f-cardnum">
+              <label for="in-cardnum">卡號 *</label>
+              <input id="in-cardnum" name="cardnum" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" required>
+              <p class="err-msg">請輸入 13–16 碼卡號（示範用，勿填真實卡號）</p>
+            </div>
+            <div class="field-grid">
+              <div class="field" id="f-expiry">
+                <label for="in-expiry">有效期限（MM/YY）*</label>
+                <input id="in-expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                <p class="err-msg">請輸入正確且未過期的日期</p>
+              </div>
+              <div class="field" id="f-cvv">
+                <label for="in-cvv">安全碼 CVV *</label>
+                <input id="in-cvv" name="cvv" inputmode="numeric" maxlength="4" placeholder="000" required>
+                <p class="err-msg">請輸入 3–4 碼安全碼</p>
+              </div>
+            </div>
+            <div class="field" id="f-agree">
+              <div class="agree-row">
+                <input type="checkbox" id="in-agree" required>
+                <label for="in-agree" style="margin:0;">我已閱讀並同意「訂房須知」，了解<b>入住日前一日（含）起不可取消或退訂</b>。</label>
+              </div>
+              <p class="err-msg" style="margin-left:26px;">請先閱讀並勾選同意</p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div class="summary-card">
+          <h3>訂房明細</h3>
+          <div id="summaryBody2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bk-actions">
+      <button class="btn btn-ghost" id="toStep1">← 上一步</button>
+      <button class="btn btn-primary" id="submitBooking">送出訂房（模擬）</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section id="bkStep3" hidden>
+    <div class="confirm-wrap">
+      <div class="confirm-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>
+      </div>
+      <h2>訂房已送出（模擬）</h2>
+      <p id="confirmGreeting">感謝您的預訂，以下是本次訂房內容：</p>
+      <div class="confirm-card" id="confirmDetails"></div>
+      <div class="confirm-disclaimer">
+        <b>提醒：</b>本網站為訂房流程之<b>模擬展示原型</b>，實際上並不會寄出任何電子郵件，也不會產生真實訂房、收費或保留房間，請勿作為正式訂房使用。
+      </div>
+      <div class="confirm-actions">
+        <a class="btn btn-ghost" href="zh.html">返回首頁</a>
+        <button class="btn btn-primary" id="restartBooking">再訂一次</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="booking.js"></script>
+</body>
+</html>
