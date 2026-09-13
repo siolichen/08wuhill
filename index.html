@@ -89,11 +89,16 @@ details[open] [data-faq-mark]{transform:rotate(45deg)}
 }
 
 
-/* FAQ：桌機收合狀態的題目列與左側照片對齊、總高度收在照片範圍內 */
+/* FAQ：題目列與左側照片同一列，第一題上緣自動對齊照片上緣 */
 @media (min-width:821px){
-  [data-faq-grid] > div:last-child{padding-top:clamp(64px,11.5vw,158px)}
-  [data-faq-grid] summary{padding:17px 0 !important}
+  [data-faq-head]{margin-bottom:0}
+  [data-faq-grid] summary{padding:20px 0 !important}
   [data-faq-grid] details p{padding-bottom:22px !important}
+}
+@media (max-width:820px){
+  [data-faq-grid]{grid-template-rows:auto !important}
+  [data-faq-grid] > div{grid-column:1 !important;grid-row:auto !important}
+  [data-faq-photo]{margin-bottom:28px}
 }
 /* ---- 平板 / tablet ---- */
 @media (max-width:1024px){
@@ -170,7 +175,7 @@ header a > span{white-space:nowrap}
         <a href="#spots" style="color:#4D4A43;white-space:nowrap">附近景點</a>
         <a href="#faq" style="color:#4D4A43;white-space:nowrap">FAQ</a>
       </span>
-      <a href="#booking" style="border:1px solid #55684F;background:#55684F;padding:9px 16px;color:#F4F2EC;letter-spacing:0.16em;white-space:nowrap;flex:0 0 auto" data-hover="background:#3E4E3A;border-color:#3E4E3A;color:#F4F2EC">線上訂房</a>
+      <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="border:1px solid #55684F;background:#55684F;padding:9px 16px;color:#F4F2EC;letter-spacing:0.16em;white-space:nowrap;flex:0 0 auto" data-hover="background:#3E4E3A;border-color:#3E4E3A;color:#F4F2EC">線上訂房</a>
       <span class="wh-nav-lang">
         <span style="background:#55684F;color:#F4F2EC;padding:6px 10px;border-radius:2px">中</span>
         <a href="en/index.html" style="color:#6E6B61;padding:6px 10px;border-radius:2px" data-hover="background:#55684F;color:#F4F2EC">English</a>
@@ -213,7 +218,7 @@ header a > span{white-space:nowrap}
         <p style="margin:0;letter-spacing:0.3em">3 間客房，一座老茶廠，</p>
         <p style="margin:0;letter-spacing:0.3em">還有日出、茶席與山裡慢下來的一天。</p>
       </div>
-      <a href="#booking" style="border:1px solid rgba(246,244,238,0.7);color:#F6F4EE;padding:16px 34px;font-size:15px;letter-spacing:0.36em;white-space:nowrap;flex:0 0 auto" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#26261F">立即訂房 →</a>
+      <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="border:1px solid rgba(246,244,238,0.7);color:#F6F4EE;padding:16px 34px;font-size:15px;letter-spacing:0.36em;white-space:nowrap;flex:0 0 auto" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#26261F">立即訂房 →</a>
     </div>
   </div>
 </section>
@@ -327,7 +332,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">早晨最先遇見光的一側。<br>大片景觀窗面向山谷，<br>附獨立露台，適合想把大部分時間都留在房裡的兩個人。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2 人</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">1 King Bed</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">獨立露台</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">山景浴缸</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
+        <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
       </div>
     </article>
 
@@ -338,7 +343,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">窗外不是遠方的山，<br>而是一排一排沿著坡地長出去的茶園。<br><br>午後泡一壺茶，<br>坐在窗邊就很好。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2 人</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">1 King Bed</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">茶園景觀</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">窗邊茶席</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
+        <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
       </div>
       <div data-reveal>
         <div style="position:relative;width:100%;aspect-ratio:5/4;overflow:hidden;background:#E4E1D9">
@@ -385,7 +390,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">為一起上山的人，<br>留一個可以好好待在一起的房間。<br><br>兩張大床、較寬敞的起居空間，<br>適合好友或小家庭入住。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2–4 人</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">2 Queen Beds</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">山景窗</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">獨立起居空間</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
+        <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看房況 →</a>
       </div>
     </article>
   </div>
@@ -401,7 +406,7 @@ header a > span{white-space:nowrap}
       <p style="margin:0">獨立衛浴 ／ 冷暖空調 ／ Wi-Fi ／ 冰箱</p>
       <p style="margin:0">吹風機 ／ 沐浴備品 ／ 毛浴巾 ／ 電熱水壺</p>
       <p style="margin:0 0 40px">霧丘高山茶 ／ 每日早餐</p>
-      <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看全部房型與即時房況 →</a>
+      <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">查看全部房型與即時房況 →</a>
     </div>
   </div>
 </section>
@@ -537,13 +542,15 @@ header a > span{white-space:nowrap}
 
 <!-- ===== 常見問題 / FAQ（可折疊） ===== -->
 <section id="faq" style="padding:clamp(115px,17vh,230px) clamp(24px,6vw,80px)">
-  <div data-faq-grid style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,0.85fr) minmax(300px,1fr);gap:clamp(36px,5vw,90px);align-items:stretch">
-    <div data-reveal>
+  <div data-faq-grid style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,0.85fr) minmax(300px,1fr);grid-template-rows:auto auto;gap:0 clamp(36px,5vw,90px);align-items:start">
+    <div data-reveal data-faq-head style="grid-column:1;grid-row:1">
       <p style="margin:0 0 26px;font-size:13px;letter-spacing:0.54em;color:#8A8578">FAQ</p>
       <h2 style="margin:0 0 40px;font-weight:500;font-size:clamp(26px,3.4vw,42px);line-height:1.55;letter-spacing:0.065em">第一次來霧丘？</h2>
+    </div>
+    <div data-reveal data-faq-photo style="grid-column:1;grid-row:2">
       <img src="assets/cloud-window.webp" alt="房間窗前的雲海" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover">
     </div>
-    <div data-reveal data-faq-list style="display:flex;flex-direction:column;justify-content:space-between;align-self:stretch">
+    <div data-reveal data-faq-list style="grid-column:2;grid-row:2;display:flex;flex-direction:column">
       <details style="border-top:1px solid rgba(38,38,31,0.14)">
         <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;font-weight:600;font-size:17px;letter-spacing:0.156em;line-height:1.8;color:#26261F">
           <span>一定看得到日出或雲海嗎？</span>
@@ -601,7 +608,7 @@ header a > span{white-space:nowrap}
       <p style="margin:0 0 30px">霧丘只有六間房。</p>
       <p style="margin:0 0 48px;color:#F6F4EE;font-weight:500">選一個想上山的日子，剩下的，交給山。</p>
     </div>
-    <a href="#booking" style="display:inline-block;background:#F6F4EE;color:#26261F;padding:18px 40px;font-size:16px;letter-spacing:0.36em" data-hover="background:#F0DFA0;color:#26261F">查看日期・選擇房型 →</a>
+    <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="display:inline-block;background:#F6F4EE;color:#26261F;padding:18px 40px;font-size:16px;letter-spacing:0.36em" data-hover="background:#F0DFA0;color:#26261F">查看日期・選擇房型 →</a>
   </div>
 </section>
 
@@ -622,7 +629,7 @@ header a > span{white-space:nowrap}
         <a href="#info" style="color:rgba(239,237,229,0.78)">住宿須知</a>
       </div>
       <p style="margin:44px 0 0">
-        <a href="#booking" style="display:inline-block;border:1px solid rgba(239,237,229,0.55);color:#EFEDE5;padding:15px 32px;font-size:15px;letter-spacing:0.36em" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#20211C">立即訂房 →</a>
+        <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="display:inline-block;border:1px solid rgba(239,237,229,0.55);color:#EFEDE5;padding:15px 32px;font-size:15px;letter-spacing:0.36em" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#20211C">立即訂房 →</a>
       </p>
     </div>
     <div>

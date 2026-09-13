@@ -89,11 +89,16 @@ details[open] [data-faq-mark]{transform:rotate(45deg)}
 }
 
 
-/* FAQ：桌機收合狀態的題目列與左側照片對齊、總高度收在照片範圍內 */
+/* FAQ：題目列與左側照片同一列，第一題上緣自動對齊照片上緣 */
 @media (min-width:821px){
-  [data-faq-grid] > div:last-child{padding-top:clamp(64px,11.5vw,158px)}
-  [data-faq-grid] summary{padding:17px 0 !important}
+  [data-faq-head]{margin-bottom:0}
+  [data-faq-grid] summary{padding:20px 0 !important}
   [data-faq-grid] details p{padding-bottom:22px !important}
+}
+@media (max-width:820px){
+  [data-faq-grid]{grid-template-rows:auto !important}
+  [data-faq-grid] > div{grid-column:1 !important;grid-row:auto !important}
+  [data-faq-photo]{margin-bottom:28px}
 }
 /* ---- 平板 / tablet ---- */
 @media (max-width:1024px){
@@ -170,7 +175,7 @@ header a > span{white-space:nowrap}
         <a href="#spots" style="color:#4D4A43;white-space:nowrap">周辺観光</a>
         <a href="#faq" style="color:#4D4A43;white-space:nowrap">FAQ</a>
       </span>
-      <a href="#booking" style="border:1px solid #55684F;background:#55684F;padding:9px 16px;color:#F4F2EC;letter-spacing:0.16em;white-space:nowrap;flex:0 0 auto" data-hover="background:#3E4E3A;border-color:#3E4E3A;color:#F4F2EC">オンライン予約</a>
+      <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="border:1px solid #55684F;background:#55684F;padding:9px 16px;color:#F4F2EC;letter-spacing:0.16em;white-space:nowrap;flex:0 0 auto" data-hover="background:#3E4E3A;border-color:#3E4E3A;color:#F4F2EC">オンライン予約</a>
       <span class="wh-nav-lang">
         <a href="../index.html" style="color:#6E6B61;padding:6px 10px;border-radius:2px" data-hover="background:#55684F;color:#F4F2EC">中</a>
         <a href="../en/index.html" style="color:#6E6B61;padding:6px 10px;border-radius:2px" data-hover="background:#55684F;color:#F4F2EC">English</a>
@@ -213,7 +218,7 @@ header a > span{white-space:nowrap}
         <p style="margin:0;letter-spacing:0.3em">客室はわずか3室。かつての製茶工場を生かした、小さな宿。</p>
         <p style="margin:0;letter-spacing:0.3em">日の出とお茶、そして山の中でゆっくりと流れる一日を。</p>
       </div>
-      <a href="#booking" style="border:1px solid rgba(246,244,238,0.7);color:#F6F4EE;padding:16px 34px;font-size:15px;letter-spacing:0.36em;white-space:nowrap;flex:0 0 auto" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#26261F">宿泊予約 →</a>
+      <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="border:1px solid rgba(246,244,238,0.7);color:#F6F4EE;padding:16px 34px;font-size:15px;letter-spacing:0.36em;white-space:nowrap;flex:0 0 auto" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#26261F">宿泊予約 →</a>
     </div>
   </div>
 </section>
@@ -327,7 +332,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">朝、いちばん早く光が届く部屋。<br>大きな窓の向こうには山あいの景色が広がり、プライベートテラスも備えています。<br>一日のほとんどを部屋で過ごしたくなる、そんな二人のための客室です。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2名</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">キングベッド1台</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">専用テラス</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">マウンテンビュー・バス</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
+        <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
       </div>
     </article>
 
@@ -338,7 +343,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">窓の向こうに広がるのは、遠くの山ではなく、<br>斜面に沿って続く茶畑。<br><br>午後にはお茶を淹れて、<br>ただ窓辺で過ごすのもおすすめです。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2名</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">キングベッド1台</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">茶畑ビュー</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">窓辺の茶席</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
+        <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
       </div>
       <div data-reveal>
         <div style="position:relative;width:100%;aspect-ratio:5/4;overflow:hidden;background:#E4E1D9">
@@ -385,7 +390,7 @@ header a > span{white-space:nowrap}
           <p style="margin:0 0 32px">大切な人と一緒に、山の時間をゆっくり過ごすための部屋。<br><br>クイーンベッド2台とゆとりあるリビングスペースを備え、<br>ご友人同士や小さなご家族での滞在におすすめです。</p>
         </div>
         <div style="margin:0 0 32px;padding-top:26px;border-top:1px solid rgba(38,38,31,0.14);font-size:14px;letter-spacing:0.252em;color:#6E6B61;line-height:1.68;display:flex;flex-wrap:wrap;align-items:center;column-gap:14px;row-gap:8px"><span style="white-space:nowrap">2～4名</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">クイーンベッド2台</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">マウンテンビュー</span><span aria-hidden="true" style="color:rgba(38,38,31,0.25)">｜</span><span style="white-space:nowrap">専用リビングスペース</span></div>
-        <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
+        <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">空室を見る →</a>
       </div>
     </article>
   </div>
@@ -401,7 +406,7 @@ header a > span{white-space:nowrap}
       <p style="margin:0">専用バスルーム ／ 冷暖房 ／ Wi-Fi ／ 冷蔵庫</p>
       <p style="margin:0">ドライヤー ／ バスアメニティ ／ タオル ／ 電気ケトル</p>
       <p style="margin:0 0 40px">霧丘の高山茶 ／ 朝食</p>
-      <a href="#booking" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">すべての客室・空室状況を見る →</a>
+      <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="font-size:15px;letter-spacing:0.324em;border-bottom:1px solid rgba(38,38,31,0.4);padding-bottom:6px">すべての客室・空室状況を見る →</a>
     </div>
   </div>
 </section>
@@ -537,13 +542,15 @@ header a > span{white-space:nowrap}
 
 <!-- ===== 常見問題 / FAQ（可折疊） ===== -->
 <section id="faq" style="padding:clamp(115px,17vh,230px) clamp(24px,6vw,80px)">
-  <div data-faq-grid style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,0.85fr) minmax(300px,1fr);gap:clamp(36px,5vw,90px);align-items:stretch">
-    <div data-reveal>
+  <div data-faq-grid style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,0.85fr) minmax(300px,1fr);grid-template-rows:auto auto;gap:0 clamp(36px,5vw,90px);align-items:start">
+    <div data-reveal data-faq-head style="grid-column:1;grid-row:1">
       <p style="margin:0 0 26px;font-size:13px;letter-spacing:0.54em;color:#8A8578">FAQ</p>
       <h2 style="margin:0 0 40px;font-weight:500;font-size:clamp(26px,3.4vw,42px);line-height:1.55;letter-spacing:0.065em">はじめて霧丘へお越しの方へ</h2>
+    </div>
+    <div data-reveal data-faq-photo style="grid-column:1;grid-row:2">
       <img src="../assets/cloud-window.webp" alt="窓の向こうの雲海" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover">
     </div>
-    <div data-reveal data-faq-list style="display:flex;flex-direction:column;justify-content:space-between;align-self:stretch">
+    <div data-reveal data-faq-list style="grid-column:2;grid-row:2;display:flex;flex-direction:column">
       <details style="border-top:1px solid rgba(38,38,31,0.14)">
         <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;font-weight:600;font-size:17px;letter-spacing:0.156em;line-height:1.8;color:#26261F">
           <span>必ず日の出や雲海を見ることができますか？</span>
@@ -601,7 +608,7 @@ header a > span{white-space:nowrap}
       <p style="margin:0 0 30px">霧丘の客室は、わずか3室。</p>
       <p style="margin:0 0 48px;color:#F6F4EE;font-weight:500">山へ行く日だけ決めたら、あとは山に任せてください。</p>
     </div>
-    <a href="#booking" style="display:inline-block;background:#F6F4EE;color:#26261F;padding:18px 40px;font-size:16px;letter-spacing:0.36em" data-hover="background:#F0DFA0;color:#26261F">日付・客室を選ぶ →</a>
+    <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="display:inline-block;background:#F6F4EE;color:#26261F;padding:18px 40px;font-size:16px;letter-spacing:0.36em" data-hover="background:#F0DFA0;color:#26261F">日付・客室を選ぶ →</a>
   </div>
 </section>
 
@@ -624,7 +631,7 @@ header a > span{white-space:nowrap}
         <a href="#info" style="color:rgba(239,237,229,0.78)">宿泊規約</a>
       </div>
       <p style="margin:44px 0 0">
-        <a href="#booking" style="display:inline-block;border:1px solid rgba(239,237,229,0.55);color:#EFEDE5;padding:15px 32px;font-size:15px;letter-spacing:0.36em" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#20211C">宿泊予約 →</a>
+        <a href="https://08wuhill.vercel.app/reserve/ja.html" target="_blank" rel="noopener" style="display:inline-block;border:1px solid rgba(239,237,229,0.55);color:#EFEDE5;padding:15px 32px;font-size:15px;letter-spacing:0.36em" data-hover="background:#F0DFA0;border-color:#F0DFA0;color:#20211C">宿泊予約 →</a>
       </p>
     </div>
     <div>
