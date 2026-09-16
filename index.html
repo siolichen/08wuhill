@@ -130,7 +130,7 @@ details[open] [data-faq-mark]{transform:rotate(45deg)}
   [data-collage] [data-cfig]:not(figure){width:48% !important;font-size:clamp(13px,3.4vw,16px) !important}
 }
 @media (prefers-reduced-motion: reduce){
-  [data-mist]{animation:none !important;opacity:0.28 !important}
+  [data-mist]{display:none !important}
 }
 
 /* ---- 導覽列 ---- */
@@ -207,7 +207,7 @@ header a > span{white-space:nowrap}
   <img data-slideshow data-hero-slide="0" src="assets/hero.webp" alt="霧丘茶宿：清晨山間茶席，茶湯注入陶杯" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;transition:opacity 2s ease-in-out">
   <img data-slideshow data-hero-slide="1" src="assets/tea-field-dawn.webp" alt="隙頂茶園與清晨雲海" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2s ease-in-out">
   <img data-slideshow data-hero-slide="2" src="assets/room2-4.webp" alt="窗邊茶席與茶園景觀" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2s ease-in-out">
-  <div data-mist aria-hidden="true" style="position:absolute;inset:-25%;pointer-events:none;background:radial-gradient(34% 22% at 62% 56%,rgba(250,250,247,1) 0%,rgba(250,250,247,0.9) 34%,rgba(250,250,247,0.45) 58%,rgba(250,250,247,0) 80%);filter:blur(20px);animation:wu-mist 15s linear infinite;will-change:transform,opacity"></div>
+  <div data-mist aria-hidden="true" style="position:absolute;inset:-25%;pointer-events:none;background:radial-gradient(34% 22% at 62% 56%,rgba(250,250,247,0.97) 0%,rgba(250,250,247,0.82) 30%,rgba(250,250,247,0.42) 54%,rgba(250,250,247,0) 80%);filter:blur(20px);animation:wu-mist 15s linear infinite;will-change:transform,opacity"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,16,0.42) 0%,rgba(20,20,16,0.18) 38%,rgba(20,20,16,0.68) 100%)"></div>
   <div style="position:relative;max-width:1440px;margin:0 auto;width:100%;color:#F6F4EE">
     <p style="margin:0 0 30px;font-size:16px;letter-spacing:0.612em;color:rgba(246,244,238,0.86)">阿里山．霧丘茶宿　<span style="font-family:'Cormorant Garamond',serif;letter-spacing:0.684em">WU HILL</span></p>
@@ -605,7 +605,7 @@ header a > span{white-space:nowrap}
     <h2 style="margin:0 0 40px;font-weight:500;font-size:clamp(28px,4.2vw,54px);line-height:1.5;letter-spacing:0.065em">下一次醒來，<br>不要先看手機。</h2>
     <div style="font-size:16px;line-height:1.88;letter-spacing:0.144em;color:rgba(246,244,238,0.9)">
       <p style="margin:0 0 30px">讓窗外的光把你叫醒。<br>看今天有沒有雲，<br>泡一杯茶，再慢慢想今天要去哪裡。</p>
-      <p style="margin:0 0 30px">霧丘只有六間房。</p>
+      <p style="margin:0 0 30px">霧丘只有 3 間客房。</p>
       <p style="margin:0 0 48px;color:#F6F4EE;font-weight:500">選一個想上山的日子，剩下的，交給山。</p>
     </div>
     <a href="https://08wuhill.vercel.app/reserve/zh.html" target="_blank" rel="noopener" style="display:inline-block;background:#F6F4EE;color:#26261F;padding:18px 40px;font-size:16px;letter-spacing:0.36em" data-hover="background:#F0DFA0;color:#26261F">查看日期・選擇房型 →</a>
